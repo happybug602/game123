@@ -2,10 +2,16 @@
 
 一个三关小游戏，包含贪吃蛇、铁链桥、怪物追击三个关卡，支持键盘和触屏操作。
 
+## 🎮 在线游玩
+
+**在线地址**: https://game123-befq1vmv26-jqfe84uabb.preview.iga-pages.com
+
+> 注意：预览链接有时效性，如失效请重新部署或前往 IGA Pages 控制台获取新链接。
+
 ## 项目信息
 
 - **GitHub 仓库**: https://github.com/happybug602/game123
-- **IGA Pages 项目**: https://console.volcengine.com/dcdn/pages/detail/pcniri7p95
+- **IGA Pages 控制台**: https://console.volcengine.com/dcdn/pages/detail/befq1vmv26
 
 ## 游戏介绍
 
@@ -41,16 +47,24 @@
 ## 部署方式
 
 ### 本地运行
-直接用浏览器打开 [index.html](file:///d:/workspace/game123/index.html) 即可游玩。
+直接用浏览器打开 `index.html` 即可游玩。
 
 ### IGA Pages 部署
 ```bash
 # 登录（使用 Access Key）
 iga login --accessKey <AK> --secretKey <SK>
 
-# 部署
+# 构建
+iga pages build
+
+# 部署（首次）
 iga pages deploy --name game123
+
+# 部署（已关联项目）
+iga pages deploy
 ```
+
+> **注意**：如果项目有 Git remote 且 GitHub 账号未在 IGA Pages 控制台授权，CLI 会自动走 Git deploy 模式导致失败。可临时移除 remote 后部署（upload deploy 模式），或前往 [IGA Pages 控制台](https://console.volcengine.com/dcdn/pages) 授权 GitHub 账号。
 
 ### GitHub Pages 部署
 在仓库 Settings → Pages → Source 选择 `main` 分支即可。
@@ -63,4 +77,4 @@ iga pages deploy --name game123
 - 响应式触屏支持
 
 ---
-Project ID: pcniri7p95
+Project ID: befq1vmv26
